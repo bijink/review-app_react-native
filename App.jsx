@@ -30,19 +30,28 @@ export default function App() {
 
   return (
     <NavigationContainer onReady={onLayoutRootView}>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={Home} />
+      <Stack.Navigator
+        screenOptions={{
+          headerStyle: { backgroundColor: "#ddd" },
+          headerTintColor: "#000",
+          headerTitleStyle: {
+            fontWeight: "bold",
+            // height: 50,
+          },
+        }}
+      >
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{
+            title: "Review App",
+          }}
+        />
         <Stack.Screen
           name="Review"
           component={ReviewDetails}
           options={{
-            title: "Review",
-            // ...TransitionPresets.DefaultTransition,
-            // ...TransitionPresets.SlideFromRightIOS,
-            // ...TransitionPresets.ModalPresentationIOS,
-            // ...TransitionPresets.RevealFromBottomAndroid,
-            // ...TransitionPresets.ModalTransition,
-            // ...TransitionPresets.FadeFromBottomAndroid,
+            title: "Review Details",
             ...TransitionPresets.ScaleFromCenterAndroid,
           }}
         />
