@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native"
+import { StyleSheet } from "react-native";
 
 export const globalStyles = StyleSheet.create({
   container: {
@@ -14,4 +14,8 @@ export const globalStyles = StyleSheet.create({
     marginVertical: 8,
     lineHeight: 20,
   },
-})
+  menuIcon: {
+    fontSize: 24,
+    marginHorizontal: 14,
+  },
+});
